@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         let my = 30;
         let a = "a";
         let b = 100;
+        let c = 200;
     }
 
 
