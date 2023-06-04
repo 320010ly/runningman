@@ -14,6 +14,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     let my = 50;
-    let your = 500;
+    let your = 450;
 }
 
