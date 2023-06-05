@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var startRunning: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,6 +24,20 @@ class ViewController: UIViewController {
         
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
-
+    
+    
+    @IBAction func startPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toRunning", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRunning" {
+            //let destVC = segue.destination as! //ResultViewController
+            //destVC.bmiValue = calculator.getBMIValue()
+            //destVC.advice = calculator.getAdvice()
+            //destVC.color = calculator.getColor()
+        }
+    }
+    
 }
 

@@ -54,18 +54,48 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30242637902801028" green="0.89863838339751623" blue="0.89863838339751623" alpha="0.76417781945430874" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DM-oi-pTG">
+                                <rect key="frame" x="161.33333333333334" y="409" width="70.333333333333343" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start !"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emq-mA-9fZ"/>
+                                    <segue destination="bWH-Ax-0o9" kind="presentation" identifier="toRunning" id="RbO-y3-OEk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2DM-oi-pTG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3RK-nB-HTe"/>
                             <constraint firstItem="deu-Cw-qWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KrZ-n5-qwg"/>
+                            <constraint firstItem="2DM-oi-pTG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="beI-II-Ha5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="deu-Cw-qWk" secondAttribute="bottom" constant="16" id="jTV-Qv-WTh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startRunning" destination="2DM-oi-pTG" id="Zux-Oh-ETe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+        <!--Running View Controller-->
+        <scene sceneID="DiH-Nz-znc">
+            <objects>
+                <viewController id="bWH-Ax-0o9" customClass="RunningViewController" customModule="sportsMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="idd-ri-myQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uFq-Bd-prm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rBA-m1-VJ4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vd8-Zj-oJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="4"/>
         </scene>
     </scenes>
     <resources>
