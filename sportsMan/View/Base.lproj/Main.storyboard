@@ -73,6 +73,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="deu-Cw-qWk" secondAttribute="bottom" constant="16" id="jTV-Qv-WTh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="maP-0V-mLH"/>
                     <connections>
                         <outlet property="startRunning" destination="2DM-oi-pTG" id="Zux-Oh-ETe"/>
                     </connections>
@@ -88,14 +89,90 @@
                     <view key="view" contentMode="scaleToFill" id="idd-ri-myQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeN-U0-wJg">
+                                <rect key="frame" x="159" y="374" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="HjH-t5-11Y" kind="presentation" identifier="toTimer" id="RKy-Z1-YDx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-09-4mD">
+                                <rect key="frame" x="159" y="374" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="startTimerTapped:" destination="bWH-Ax-0o9" eventType="touchUpInside" id="NVP-Ho-c4W"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uFq-Bd-prm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YeN-U0-wJg" firstAttribute="centerY" secondItem="idd-ri-myQ" secondAttribute="centerY" id="Gfm-7m-qKT"/>
+                            <constraint firstItem="YeN-U0-wJg" firstAttribute="centerX" secondItem="idd-ri-myQ" secondAttribute="centerX" id="pHo-hA-AyO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rBA-m1-VJ4"/>
+                    <connections>
+                        <outlet property="toTimer" destination="PdV-09-4mD" id="wpo-gi-IDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vd8-Zj-oJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="4"/>
+            <point key="canvasLocation" x="835.87786259541986" y="3.5211267605633805"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="y3p-Za-hFy">
+            <objects>
+                <viewController id="HjH-t5-11Y" customClass="TimerViewController" customModule="sportsMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rgN-8w-hJG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhY-dw-5eu">
+                                <rect key="frame" x="175.66666666666666" y="381" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsu-ML-qkz">
+                                <rect key="frame" x="167" y="443" width="60" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="HjH-t5-11Y" eventType="touchUpInside" id="p78-JB-W6K"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="toMain1" modalPresentationStyle="fullScreen" id="4TB-j6-PZb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1b-Yg-iBp">
+                                <rect key="frame" x="161" y="486" width="71" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseTimer:" destination="HjH-t5-11Y" eventType="touchUpInside" id="M8J-3Z-fwb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="10b-Y2-90b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rhY-dw-5eu" firstAttribute="centerX" secondItem="rgN-8w-hJG" secondAttribute="centerX" id="Ue3-mS-bdu"/>
+                            <constraint firstItem="rhY-dw-5eu" firstAttribute="centerY" secondItem="rgN-8w-hJG" secondAttribute="centerY" id="uMB-AP-Gy0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="W1b-Yg-iBp" id="iPz-iX-n1y"/>
+                        <outlet property="timerLabel" destination="rhY-dw-5eu" id="OjD-bt-pv6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHD-yu-aod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="4"/>
         </scene>
     </scenes>
     <resources>

@@ -14,6 +14,7 @@
 		170735B52A2CC811000A1E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170735B42A2CC811000A1E6B /* Assets.xcassets */; };
 		170735B82A2CC811000A1E6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170735B62A2CC811000A1E6B /* LaunchScreen.storyboard */; };
 		74F8D2292A2E100F00F78C61 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8D2282A2E100F00F78C61 /* RunningViewController.swift */; };
+		74F8D22D2A2F7B8B00F78C61 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8D22C2A2F7B8B00F78C61 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		170735B72A2CC811000A1E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		170735B92A2CC811000A1E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74F8D2282A2E100F00F78C61 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
+		74F8D22C2A2F7B8B00F78C61 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				170735AF2A2CC80F000A1E6B /* ViewController.swift */,
 				74F8D2282A2E100F00F78C61 /* RunningViewController.swift */,
+				74F8D22C2A2F7B8B00F78C61 /* TimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F8D22D2A2F7B8B00F78C61 /* TimerViewController.swift in Sources */,
 				170735B02A2CC80F000A1E6B /* ViewController.swift in Sources */,
 				170735AC2A2CC80F000A1E6B /* AppDelegate.swift in Sources */,
 				74F8D2292A2E100F00F78C61 /* RunningViewController.swift in Sources */,
