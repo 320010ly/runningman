@@ -16,8 +16,8 @@ class RunningViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        toTimer.isEnabled = false
-        toTimer.alpha = 0
+//        toTimer.isEnabled = false
+//        toTimer.alpha = 0
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {

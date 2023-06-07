@@ -23,21 +23,13 @@ class ViewController: UIViewController {
         gradientLayer.endPoint = CGPoint(x:0,y:0.39)
         
         view.layer.insertSublayer(gradientLayer, at: 0)
+        
+//        print(recordList)
     }
     
     
     @IBAction func startPressed(_ sender: Any) {
         performSegue(withIdentifier: "toRunning", sender: self)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toRunning" {
-            //let destVC = segue.destination as! //ResultViewController
-            //destVC.bmiValue = calculator.getBMIValue()
-            //destVC.advice = calculator.getAdvice()
-            //destVC.color = calculator.getColor()
-        }
-    }
-    
 }
 
