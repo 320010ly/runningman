@@ -16,44 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="deu-Cw-qWk">
-                                <rect key="frame" x="9" y="767.66666666666663" width="375" height="34.333333333333371"/>
-                                <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OF-16-ipL" userLabel="主页">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
-                                            <backgroundConfiguration key="background"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N6-dF-2OU" userLabel="商城">
-                                        <rect key="frame" x="100" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
-                                            <backgroundConfiguration key="background"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD3-Q7-isA" userLabel="记录">
-                                        <rect key="frame" x="200" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
-                                            <backgroundConfiguration key="background"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDF-8L-qBL" userLabel="个人">
-                                        <rect key="frame" x="300" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
-                                            <backgroundConfiguration key="background"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lg1-ge-Ajw">
-                                <rect key="frame" x="-24" y="752" width="441" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.30242637902801028" green="0.89863838339751623" blue="0.89863838339751623" alpha="0.76417781945430874" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DM-oi-pTG">
                                 <rect key="frame" x="161.33333333333334" y="409" width="70.333333333333343" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
@@ -63,14 +25,86 @@
                                     <segue destination="bWH-Ax-0o9" kind="presentation" identifier="toRunning" id="RbO-y3-OEk"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg1-ge-Ajw">
+                                <rect key="frame" x="0.0" y="738" width="393" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" alignment="top" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="deu-Cw-qWk">
+                                        <rect key="frame" x="18.666666666666657" y="15" width="356" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OF-16-ipL" userLabel="主页">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="08v-gi-mcN"/>
+                                                    <constraint firstAttribute="width" constant="50" id="ztu-F2-Wq5"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="figure.run.circle" catalog="system"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N6-dF-2OU" userLabel="商城">
+                                                <rect key="frame" x="102" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="6oO-R5-WsR"/>
+                                                    <constraint firstAttribute="width" constant="50" id="k6w-5P-TkT"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="bag" catalog="system"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD3-Q7-isA" userLabel="记录">
+                                                <rect key="frame" x="204" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="1Vq-cd-rPn"/>
+                                                    <constraint firstAttribute="height" constant="50" id="y17-hH-SB5"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="chart.line.uptrend.xyaxis" catalog="system"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDF-8L-qBL" userLabel="个人">
+                                                <rect key="frame" x="306" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="B0l-MM-MFW"/>
+                                                    <constraint firstAttribute="width" constant="50" id="nwm-78-dqk"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="gearshape" catalog="system"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="COJ-Ha-ZfE"/>
+                                            <constraint firstItem="7N6-dF-2OU" firstAttribute="width" secondItem="8OF-16-ipL" secondAttribute="width" id="GMb-A1-hQm"/>
+                                            <constraint firstItem="vDF-8L-qBL" firstAttribute="width" secondItem="8OF-16-ipL" secondAttribute="width" id="QFd-fD-f5k"/>
+                                            <constraint firstItem="rD3-Q7-isA" firstAttribute="width" secondItem="8OF-16-ipL" secondAttribute="width" id="w5h-px-kgc"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="0.4081216523141572" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstItem="deu-Cw-qWk" firstAttribute="centerX" secondItem="Lg1-ge-Ajw" secondAttribute="centerX" id="1qx-fJ-RdZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="PXe-ma-zDw"/>
+                                    <constraint firstItem="deu-Cw-qWk" firstAttribute="centerY" secondItem="Lg1-ge-Ajw" secondAttribute="centerY" id="cK5-Ra-YIB"/>
+                                    <constraint firstAttribute="width" constant="393" id="vmJ-fX-WtE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2DM-oi-pTG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3RK-nB-HTe"/>
-                            <constraint firstItem="deu-Cw-qWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KrZ-n5-qwg"/>
+                            <constraint firstItem="Lg1-ge-Ajw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KL8-km-LvT"/>
                             <constraint firstItem="2DM-oi-pTG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="beI-II-Ha5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="deu-Cw-qWk" secondAttribute="bottom" constant="16" id="jTV-Qv-WTh"/>
+                            <constraint firstItem="Lg1-ge-Ajw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mec-Ek-bcK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="maP-0V-mLH"/>
@@ -176,6 +210,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="102"/>
+        <image name="figure.run.circle" catalog="system" width="128" height="123"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
