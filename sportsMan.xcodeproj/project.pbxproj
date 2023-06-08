@@ -13,7 +13,6 @@
 		170735B32A2CC80F000A1E6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170735B12A2CC80F000A1E6B /* Main.storyboard */; };
 		170735B52A2CC811000A1E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170735B42A2CC811000A1E6B /* Assets.xcassets */; };
 		170735B82A2CC811000A1E6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170735B62A2CC811000A1E6B /* LaunchScreen.storyboard */; };
-		176892112A31B27400D22F68 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 176892102A31B27400D22F68 /* 1.png */; };
 		17D8E89A2A3215AD00E41D4A /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D8E8992A3215AD00E41D4A /* First.storyboard */; };
 		17D8E89E2A32160F00E41D4A /* First.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8E89D2A32160F00E41D4A /* First.swift */; };
 		74F8D2292A2E100F00F78C61 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8D2282A2E100F00F78C61 /* RunningViewController.swift */; };
@@ -30,7 +29,6 @@
 		170735B42A2CC811000A1E6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		170735B72A2CC811000A1E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		170735B92A2CC811000A1E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		176892102A31B27400D22F68 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../../ly/1.png; sourceTree = "<group>"; };
 		17D8E8992A3215AD00E41D4A /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		17D8E89D2A32160F00E41D4A /* First.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First.swift; sourceTree = "<group>"; };
 		74F8D2282A2E100F00F78C61 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				170735B42A2CC811000A1E6B /* Assets.xcassets */,
 				170735B62A2CC811000A1E6B /* LaunchScreen.storyboard */,
 				170735B92A2CC811000A1E6B /* Info.plist */,
-				176892102A31B27400D22F68 /* 1.png */,
 			);
 			path = sportsMan;
 			sourceTree = "<group>";
@@ -171,7 +168,6 @@
 				170735B82A2CC811000A1E6B /* LaunchScreen.storyboard in Resources */,
 				170735B52A2CC811000A1E6B /* Assets.xcassets in Resources */,
 				170735B32A2CC80F000A1E6B /* Main.storyboard in Resources */,
-				176892112A31B27400D22F68 /* 1.png in Resources */,
 				17D8E89A2A3215AD00E41D4A /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
