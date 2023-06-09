@@ -32,7 +32,7 @@ class RunningViewController: UIViewController {
             toTimer.isEnabled = true
             toTimer.setTitle("START", for: toTimer.state)
             toTimer.setTitleColor(.red, for: toTimer.state)
-            Person.image = UIImage(named: "WarmUp")
+            Person.image = UIImage(named: "1_WarmUp")
             
         }
     }
