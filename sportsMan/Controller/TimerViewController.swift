@@ -51,7 +51,10 @@ class TimerViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         endTime = formatter.string(from: date.addingTimeInterval(TimeInterval(time)))
         // record the new record
-        recordList.append(Record(st: startTime, et: endTime, du: duration))
+//        print(startTime)
+//        print(endTime)
+//        print(duration)
+        addRecord(st: startTime, et: endTime, du: duration)
         performSegue(withIdentifier: "toMain1", sender: self)
     }
     
@@ -77,6 +80,22 @@ class TimerViewController: UIViewController {
             timer.fireDate = Date.distantPast
             pauseButton.setTitle("Pause", for: .normal)
             timerState = true
+        }
+    }
+    
+    func addRecord(st: String, et: String, du: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let record = Record(context: context)
+        record.startTime = st
+        record.endTime = et
+        record.duration = du
+        
+        do {
+            try context.save()
+        } catch {
+            print("Additon failed!")
         }
     }
     

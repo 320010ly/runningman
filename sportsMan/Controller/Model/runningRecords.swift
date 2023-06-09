@@ -7,16 +7,17 @@
 
 import Foundation
 
-struct Record {
-    let startTime: String
-    let endTime: String
-    let duration: String
-    
-    init (st: String, et: String, du: String) {
-        self.startTime = st
-        self.endTime = et
-        self.duration = du
-    }
-}
+//struct Record {
+//    let startTime: String
+//    let endTime: String
+//    let duration: String
+//
+//    init (st: String, et: String, du: String) {
+//        self.startTime = st
+//        self.endTime = et
+//        self.duration = du
+//    }
+//}
+//
+//var recordList: [Record] = [Record]()
 
-var recordList: [Record] = [Record]()

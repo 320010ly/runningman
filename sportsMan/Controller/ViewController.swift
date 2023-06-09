@@ -25,6 +25,19 @@ class ViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, at: 0)
         
 //        print(recordList)
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//
+//        let request = Record.fetchRequest()
+//        var records: [Record] = []
+//
+//        do {
+//            records = try context.fetch(request)
+//
+//        } catch {
+//            print("Failed to get data!")
+//        }
+//        print(records[2].startTime)
     }
     
     
