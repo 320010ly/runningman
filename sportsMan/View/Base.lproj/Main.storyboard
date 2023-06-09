@@ -88,27 +88,34 @@
                                     <constraint firstAttribute="width" constant="393" id="vmJ-fX-WtE"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stand_fat" translatesAutoresizingMaskIntoConstraints="NO" id="jFn-PU-BXD">
+                                <rect key="frame" x="42" y="116" width="414" height="661"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DM-oi-pTG">
-                                <rect key="frame" x="161.33333333333334" y="409" width="70.333333333333343" height="34.333333333333314"/>
+                                <rect key="frame" x="70" y="391" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HYk-hy-bAC"/>
+                                    <constraint firstAttribute="width" constant="70" id="PmK-bc-byf"/>
+                                </constraints>
+                                <color key="tintColor" red="0.67184317110000003" green="0.87493592499999995" blue="0.9086458087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start !"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="figure.run.circle.fill" catalog="system" strokeWidth="70" strokeOutset="70"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emq-mA-9fZ"/>
                                     <segue destination="bWH-Ax-0o9" kind="presentation" identifier="toRunning" id="RbO-y3-OEk"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stand_fat" translatesAutoresizingMaskIntoConstraints="NO" id="jFn-PU-BXD">
-                                <rect key="frame" x="0.0" y="141" width="477" height="571"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2DM-oi-pTG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3RK-nB-HTe"/>
+                            <constraint firstItem="2DM-oi-pTG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1pY-kr-m8c"/>
                             <constraint firstItem="Lg1-ge-Ajw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KL8-km-LvT"/>
-                            <constraint firstItem="2DM-oi-pTG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="beI-II-Ha5"/>
                             <constraint firstItem="Lg1-ge-Ajw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mec-Ek-bcK"/>
+                            <constraint firstItem="2DM-oi-pTG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="smG-mr-tAI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="maP-0V-mLH"/>
@@ -129,30 +136,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-09-4mD">
-                                <rect key="frame" x="165" y="374" width="63" height="35"/>
+                                <rect key="frame" x="70" y="356.66666666666669" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1dA-Df-lBl"/>
+                                    <constraint firstAttribute="width" constant="70" id="A8N-ZR-fgN"/>
+                                </constraints>
+                                <color key="tintColor" red="0.67184317110000003" green="0.87493592499999995" blue="0.9086458087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Run !"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="figure.run.circle.fill" catalog="system"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="startTimerTapped:" destination="bWH-Ax-0o9" eventType="touchUpInside" id="NVP-Ho-c4W"/>
                                     <segue destination="HjH-t5-11Y" kind="presentation" identifier="toTimer" id="QOm-z2-qtn"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heavy" translatesAutoresizingMaskIntoConstraints="NO" id="Z9m-XW-3Z4">
+                                <rect key="frame" x="115" y="121" width="278" height="594"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uFq-Bd-prm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PdV-09-4mD" firstAttribute="centerX" secondItem="idd-ri-myQ" secondAttribute="centerX" id="9oB-yy-ZIE"/>
+                            <constraint firstItem="PdV-09-4mD" firstAttribute="leading" secondItem="uFq-Bd-prm" secondAttribute="leading" constant="70" id="aA8-A9-gQs"/>
                             <constraint firstItem="PdV-09-4mD" firstAttribute="centerY" secondItem="idd-ri-myQ" secondAttribute="centerY" id="u06-fN-bCs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rBA-m1-VJ4"/>
                     <connections>
+                        <outlet property="Person" destination="Z9m-XW-3Z4" id="2AS-AG-KXF"/>
                         <outlet property="toTimer" destination="PdV-09-4mD" id="wpo-gi-IDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vd8-Zj-oJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="-246"/>
+            <point key="canvasLocation" x="806.87022900763361" y="-246.47887323943664"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="y3p-Za-hFy">
@@ -163,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ppj-Ic-2Hm">
-                                <rect key="frame" x="122.33333333333333" y="354.33333333333331" width="148.66666666666669" height="74.666666666666686"/>
+                                <rect key="frame" x="122.33333333333333" y="668.33333333333337" width="148.66666666666669" height="74.666666666666629"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhY-dw-5eu">
                                         <rect key="frame" x="53.666666666666671" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
@@ -172,7 +191,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MRx-92-jS5">
-                                        <rect key="frame" x="0.0" y="40.333333333333371" width="148.66666666666666" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="40.333333333333258" width="148.66666666666666" height="34.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsu-ML-qkz">
                                                 <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="34.333333333333336"/>
@@ -195,12 +214,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RunWithBa" translatesAutoresizingMaskIntoConstraints="NO" id="VoS-KA-xfb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="724"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="10b-Y2-90b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="10b-Y2-90b" firstAttribute="trailing" secondItem="VoS-KA-xfb" secondAttribute="trailing" id="0UU-QB-NeD"/>
+                            <constraint firstItem="10b-Y2-90b" firstAttribute="bottom" secondItem="VoS-KA-xfb" secondAttribute="bottom" id="BX1-jG-ffF"/>
+                            <constraint firstItem="VoS-KA-xfb" firstAttribute="top" secondItem="10b-Y2-90b" secondAttribute="top" id="BpE-98-CIK"/>
+                            <constraint firstItem="VoS-KA-xfb" firstAttribute="leading" secondItem="10b-Y2-90b" secondAttribute="leading" id="EGX-7X-gD2"/>
+                            <constraint firstItem="VoS-KA-xfb" firstAttribute="trailing" secondItem="10b-Y2-90b" secondAttribute="trailing" id="PyV-sM-1Zb"/>
                             <constraint firstItem="Ppj-Ic-2Hm" firstAttribute="centerX" secondItem="rgN-8w-hJG" secondAttribute="centerX" id="Snu-0c-Y56"/>
-                            <constraint firstItem="Ppj-Ic-2Hm" firstAttribute="centerY" secondItem="rgN-8w-hJG" secondAttribute="centerY" id="bOk-UI-kne"/>
+                            <constraint firstItem="10b-Y2-90b" firstAttribute="bottom" secondItem="VoS-KA-xfb" secondAttribute="bottom" id="ii1-nc-iK6"/>
+                            <constraint firstItem="10b-Y2-90b" firstAttribute="bottom" secondItem="Ppj-Ic-2Hm" secondAttribute="bottom" constant="40" id="zDs-Mb-4Wj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -214,8 +242,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Heavy" width="782" height="2000"/>
+        <image name="RunWithBa" width="1391" height="2000"/>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="chart.bar" catalog="system" width="128" height="89"/>
+        <image name="figure.run.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="play.circle" catalog="system" width="128" height="123"/>
         <image name="stand_fat" width="1553" height="2000"/>
