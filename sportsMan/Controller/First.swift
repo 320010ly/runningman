@@ -71,21 +71,21 @@ class First:UIViewController{
     
     @IBAction func male(_ sender: UIButton) {
         usergender = .male
-        male.layer.backgroundColor = UIColor.green.cgColor
+        male.backgroundColor = UIColor(named: "cover")
         
         female.layer.backgroundColor = UIColor.white.cgColor
     }
     
     @IBAction func female(_ sender: UIButton) {
         usergender = .female
-        female.layer.backgroundColor = UIColor.green.cgColor
+        female.backgroundColor = UIColor(named: "cover")
         
         male.layer.backgroundColor = UIColor.white.cgColor
     }
     
     @IBAction func weightloss(_ sender: UIButton) {
         usergoal = .weightloss
-        weightloss.layer.backgroundColor = UIColor.green.cgColor
+        weightloss.backgroundColor = UIColor(named: "cover")
         muscle.layer.backgroundColor = UIColor.white.cgColor
         shape.layer.backgroundColor = UIColor.white.cgColor
         health.layer.backgroundColor = UIColor.white.cgColor
@@ -93,7 +93,7 @@ class First:UIViewController{
     
     @IBAction func muscle(_ sender: UIButton) {
         usergoal = .muscle
-        muscle.layer.backgroundColor = UIColor.green.cgColor
+        muscle.backgroundColor = UIColor(named: "cover")
         weightloss.layer.backgroundColor = UIColor.white.cgColor
         shape.layer.backgroundColor = UIColor.white.cgColor
         health.layer.backgroundColor = UIColor.white.cgColor
@@ -101,7 +101,7 @@ class First:UIViewController{
     
     @IBAction func shape(_ sender: UIButton) {
         usergoal = .shape
-        shape.layer.backgroundColor = UIColor.green.cgColor
+        shape.backgroundColor = UIColor(named: "cover")
         muscle.layer.backgroundColor = UIColor.white.cgColor
         weightloss.layer.backgroundColor = UIColor.white.cgColor
         health.layer.backgroundColor = UIColor.white.cgColor
@@ -110,7 +110,7 @@ class First:UIViewController{
     
     @IBAction func health(_ sender: UIButton) {
         usergoal = .health
-        health.layer.backgroundColor = UIColor.green.cgColor
+        health.backgroundColor = UIColor(named: "cover")
         muscle.layer.backgroundColor = UIColor.white.cgColor
         shape.layer.backgroundColor = UIColor.white.cgColor
         weightloss.layer.backgroundColor = UIColor.white.cgColor
