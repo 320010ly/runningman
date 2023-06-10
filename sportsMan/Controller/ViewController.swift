@@ -40,6 +40,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var sportbutton: UIButton!
     @IBOutlet weak var healthbutton: UIButton!
     
+    @IBOutlet weak var msgtitle: UILabel!
+    
+    @IBOutlet weak var detail: UILabel!
+    
+    
     //in datapage
     
     //in personpage
@@ -235,12 +240,18 @@ class ViewController: UIViewController {
     
     @IBAction func openmsg_dr_1(_ sender: Any) {
         msg.isHidden = false
-        
+        msgtitle.text = "茶"
+        detail.numberOfLines = 0
+        detail.lineBreakMode = .byWordWrapping
+        detail.text = "茶，对我们的健身及整体健康有诸多益处。绿茶富含抗氧化物质，能增强体质，提高新陈代谢，有助于燃烧脂肪。乌龙茶和黑茶可助消化，补充运动后的能量。"
     }
     
     @IBAction func openmsg_dr_2(_ sender: Any) {
         msg.isHidden = false
-        
+        msgtitle.text = "酒"
+        detail.numberOfLines = 0
+        detail.lineBreakMode = .byWordWrapping
+        detail.text = "适量饮用红酒对身体健康和健身有积极影响。红酒含有抗氧化剂，可以降低心脏病风险，提高好胆固醇。然而，过量饮酒会影响运动表现，损害肌肉恢复，"
     }
 }
 

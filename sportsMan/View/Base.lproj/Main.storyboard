@@ -989,14 +989,17 @@
                                                             <action selector="closemsg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eQN-is-9e4"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="膨化食品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gs-kr-K2M">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="膨化食品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gs-kr-K2M" userLabel="msgtitle">
                                                         <rect key="frame" x="59.333333333333336" y="50" width="121.33333333333331" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeM-NR-rZE" userLabel="detail">
-                                                        <rect key="frame" x="20" y="136" width="48" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeM-NR-rZE" userLabel="detail">
+                                                        <rect key="frame" x="20" y="136" width="200" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="D6D-rR-ryy"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1005,6 +1008,7 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="7gs-kr-K2M" firstAttribute="centerX" secondItem="wEm-KJ-umg" secondAttribute="centerX" id="2Op-AV-jz9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oeM-NR-rZE" secondAttribute="trailing" constant="20" id="6Et-Gc-3Mr"/>
                                                     <constraint firstItem="DPA-bV-nfl" firstAttribute="top" secondItem="wEm-KJ-umg" secondAttribute="top" constant="4" id="Efs-Ia-snJ"/>
                                                     <constraint firstAttribute="width" constant="240" id="Vh4-6v-lgY"/>
                                                     <constraint firstItem="7gs-kr-K2M" firstAttribute="top" secondItem="wEm-KJ-umg" secondAttribute="top" constant="50" id="WRw-M3-fDZ"/>
@@ -1175,6 +1179,7 @@
                         <outlet property="block_sport" destination="85S-Vy-aUe" id="qci-ag-XLu"/>
                         <outlet property="databutton" destination="rD3-Q7-isA" id="wLW-Jl-Def"/>
                         <outlet property="datapage" destination="sCc-Va-if4" id="vXW-se-QzA"/>
+                        <outlet property="detail" destination="oeM-NR-rZE" id="XxL-8J-ZeJ"/>
                         <outlet property="drinkbutton" destination="jYH-xN-a2a" id="oHx-VW-R9p"/>
                         <outlet property="foodbutton" destination="dIs-37-pGp" id="5n5-3Z-gUK"/>
                         <outlet property="head" destination="pPu-XN-6Dt" id="25W-Wq-wOd"/>
@@ -1182,6 +1187,7 @@
                         <outlet property="mainbutton" destination="8OF-16-ipL" id="acD-lQ-7ky"/>
                         <outlet property="mainpage" destination="cCP-4f-xDZ" id="rgH-6e-Osw"/>
                         <outlet property="msg" destination="vWC-OX-pyo" id="m8m-D9-5tb"/>
+                        <outlet property="msgtitle" destination="7gs-kr-K2M" id="52b-6U-thZ"/>
                         <outlet property="personbutton" destination="vDF-8L-qBL" id="Zfe-qN-GYp"/>
                         <outlet property="personpage" destination="f9J-ie-je0" id="1IU-Q9-fDH"/>
                         <outlet property="shopbutton" destination="7N6-dF-2OU" id="jA8-FK-y7L"/>
