@@ -251,7 +251,7 @@ class ViewController: UIViewController {
         msgtitle.text = "酒"
         detail.numberOfLines = 0
         detail.lineBreakMode = .byWordWrapping
-        detail.text = "适量饮用红酒对身体健康和健身有积极影响。红酒含有抗氧化剂，可以降低心脏病风险，提高好胆固醇。然而，过量饮酒会影响运动表现，损害肌肉恢复，"
+        detail.text = "适量饮用红酒对身体健康和健身有积极影响。红酒含有抗氧化剂，可以降低心脏病风险，提高好胆固醇。然而，过量饮酒会影响运动表现，损害肌肉恢复。"
     }
 }
 
