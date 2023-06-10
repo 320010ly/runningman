@@ -49,6 +49,15 @@ class ViewController: UIViewController {
     
     //in personpage
     
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var goal: UILabel!
+    
+    
+    @IBOutlet weak var switchmode: UISwitch!
+    
+    @IBOutlet weak var reset: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -69,10 +78,14 @@ class ViewController: UIViewController {
         }
         
         msg.isHidden = true
+        //person page
+        reset.layer.cornerRadius = reset.frame.size.height / 2
+        reset.clipsToBounds = true
         
-        
+        gender.text = "性别：女"
+        goal.text = "运动目标：减重"
 
-        
+        //
 //        print(recordList)
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //        let context = appDelegate.persistentContainer.viewContext
@@ -253,5 +266,20 @@ class ViewController: UIViewController {
         detail.lineBreakMode = .byWordWrapping
         detail.text = "适量饮用红酒对身体健康和健身有积极影响。红酒含有抗氧化剂，可以降低心脏病风险，提高好胆固醇。然而，过量饮酒会影响运动表现，损害肌肉恢复。"
     }
+    //person page
+    
+    @IBAction func switchmode(_ sender: UISwitch) {
+        
+    }
+    
+    @IBAction func reset(_ sender: UIButton) {
+        let mainstoryboard:UIStoryboard = UIStoryboard(name: "First", bundle: nil)
+        let mainvc = mainstoryboard.instantiateViewController(withIdentifier: "firstview")
+        //self.navigationController?.pushViewController(mainvc, animated: true)
+        mainvc.modalPresentationStyle = .fullScreen
+        self.present(mainvc, animated: true)
+    }
+    
+    
+    
 }
-
