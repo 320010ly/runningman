@@ -209,7 +209,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func healthPressed(_ sender: Any) {
-        foodbutton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        foodbutton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         drinkbutton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         sportbutton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         healthbutton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)

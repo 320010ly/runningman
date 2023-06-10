@@ -1341,7 +1341,7 @@
         <image name="sport_2" width="96" height="96"/>
         <image name="sport_3" width="96" height="96"/>
         <namedColor name="cover">
-            <color red="0.66666666666666663" green="0.87450980392156863" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.66699999570846558" green="0.875" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="wordtype_0">
             <color red="0.33333333333333331" green="0.43137254901960786" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
