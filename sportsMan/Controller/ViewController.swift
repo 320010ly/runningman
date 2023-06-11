@@ -26,7 +26,9 @@ class ViewController: UIViewController {
     //the other small parts in every page
     //in leader
     @IBOutlet var startRunning: UIButton!
+    
     //in mainpage
+    @IBOutlet var mainPIc: UIImageView!
     
     //in shoppage
     @IBOutlet var items: [UIView]!
@@ -46,6 +48,13 @@ class ViewController: UIViewController {
     
     
     //in datapage
+    @IBOutlet var recordTableView: UITableView!
+    @IBOutlet var timeSum: UILabel!
+    @IBOutlet var progressView: UIProgressView!
+    
+    var records: [Record] = []
+    var selectIndex = 0
+    var allTime = 0
     
     //in personpage
     
@@ -56,7 +65,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchmode: UISwitch!
     
     @IBOutlet weak var reset: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,21 +93,35 @@ class ViewController: UIViewController {
         gender.text = "性别：女"
         goal.text = "运动目标：减重"
 
-        //
-//        print(recordList)
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let context = appDelegate.persistentContainer.viewContext
-//
-//        let request = Record.fetchRequest()
-//        var records: [Record] = []
-//
-//        do {
-//            records = try context.fetch(request)
-//
-//        } catch {
-//            print("Failed to get data!")
-//        }
-//        print(records[2].startTime)
+        //data page
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = Record.fetchRequest()
+
+        do {
+            records = try context.fetch(request)
+
+        } catch {
+            print("Failed to get data!")
+        }
+        
+        recordTableView.dataSource = self
+        
+        for i in records {
+            allTime += Int(i.duration ?? "0") ?? 0
+        }
+        print(allTime)
+        let minutes = (allTime / 60) % 60
+        let hours = (allTime / 60) / 60
+        timeSum.text = String(format: "%02d时%02d分", hours, minutes)
+        
+        progressView.progress = Float(allTime) / 30.0
+        
+        if (allTime >= 15 && allTime < 30) {
+            mainPIc.image = UIImage(named: "0_Medium")
+        } else if (allTime >= 30) {
+            mainPIc.image = UIImage(named: "0_Thin")
+        }
     }
     
     
@@ -278,8 +300,45 @@ class ViewController: UIViewController {
         //self.navigationController?.pushViewController(mainvc, animated: true)
         mainvc.modalPresentationStyle = .fullScreen
         self.present(mainvc, animated: true)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        for i in records {
+            context.delete(i)
+            do {
+                try context.save()
+            } catch {
+                print("删除失败")
+            }
+        }
     }
     
     
     
+}
+
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return records.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = records[indexPath.row].startTime
+        content.secondaryText = records[indexPath.row].endTime
+        cell.contentConfiguration = content
+        
+        return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectIndex = indexPath.row
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "edit", sender: nil)
+    }
 }

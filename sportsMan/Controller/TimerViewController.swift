@@ -51,9 +51,6 @@ class TimerViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         endTime = formatter.string(from: date.addingTimeInterval(TimeInterval(time)))
         // record the new record
-//        print(startTime)
-//        print(endTime)
-//        print(duration)
         addRecord(st: startTime, et: endTime, du: duration)
         performSegue(withIdentifier: "toMain1", sender: self)
     }
@@ -63,7 +60,8 @@ class TimerViewController: UIViewController {
         let minutes = counter / 60
         let seconds = counter % 60
         timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
-        duration = String(format: "%02d:%02d", minutes, seconds)
+//        duration = String(format: "%02d:%02d", minutes, seconds)
+        duration = String(counter)
         let formatter = DateFormatter()
         let tz = TimeZone.init(identifier: "Asia/Beijing")
         formatter.timeZone = tz
@@ -74,11 +72,11 @@ class TimerViewController: UIViewController {
     @IBAction func pauseTimer(_ sender: UIButton) {
         if (timerState == true) {
             timer.fireDate = Date.distantFuture
-            pauseButton.setTitle("Continue", for: .normal)
+            pauseButton.setBackgroundImage(UIImage(systemName: "play.circle.fill"), for: .normal)
             timerState = false
         } else {
             timer.fireDate = Date.distantPast
-            pauseButton.setTitle("Pause", for: .normal)
+            pauseButton.setBackgroundImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
             timerState = true
         }
     }
