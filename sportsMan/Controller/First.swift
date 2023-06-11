@@ -71,16 +71,14 @@ class First:UIViewController{
     
     @IBAction func male(_ sender: UIButton) {
         usergender = .male
-        male.backgroundColor = UIColor(named: "cover")
-        
-        female.layer.backgroundColor = UIColor.white.cgColor
+        male.setImage(UIImage(named: "male_chosen"), for: .normal)
+        female.setImage(UIImage(named: "female"), for: .normal)
     }
     
     @IBAction func female(_ sender: UIButton) {
         usergender = .female
-        female.backgroundColor = UIColor(named: "cover")
-        
-        male.layer.backgroundColor = UIColor.white.cgColor
+        female.setImage(UIImage(named: "female_chosen"), for: .normal)
+        male.setImage(UIImage(named: "male"), for: .normal)
     }
     
     @IBAction func weightloss(_ sender: UIButton) {

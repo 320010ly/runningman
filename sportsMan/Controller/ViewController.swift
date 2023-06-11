@@ -43,9 +43,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var healthbutton: UIButton!
     
     @IBOutlet weak var msgtitle: UILabel!
-    
     @IBOutlet weak var detail: UILabel!
-    
+    @IBOutlet weak var get_img: UIImageView!
+    @IBOutlet weak var get_tea_button: UIButton!
     
     //in datapage
     @IBOutlet var recordTableView: UITableView!
@@ -70,12 +70,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //
-        let gradientLayer  = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [UIColor.cyan.cgColor,UIColor.white.cgColor]
-        gradientLayer.startPoint = CGPoint(x:0,y:0)
-        gradientLayer.endPoint = CGPoint(x:0,y:0.39)
-        mainpage.layer.insertSublayer(gradientLayer, at: 0)
+//        let gradientLayer  = CAGradientLayer()
+//        gradientLayer.frame = view.bounds
+//        gradientLayer.colors = [UIColor.cyan.cgColor,UIColor.white.cgColor]
+//        gradientLayer.startPoint = CGPoint(x:0,y:0)
+//        gradientLayer.endPoint = CGPoint(x:0,y:0.39)
+//        mainpage.layer.insertSublayer(gradientLayer, at: 0)
         
         //set black border for items in shop
         for item in items{
@@ -237,8 +237,8 @@ class ViewController: UIViewController {
         foodbutton.setTitleColor(UIColor(named:"word_0"), for: .normal)
         drinkbutton.backgroundColor = UIColor.white
         drinkbutton.setTitleColor(UIColor(named:"word_0"), for: .normal)
-        sportbutton.backgroundColor = UIColor.white
-        sportbutton.setTitleColor(UIColor(named:"word_0"), for: .normal)
+        sportbutton.backgroundColor = UIColor(named:"shopbutton_chosen")
+        sportbutton.setTitleColor(UIColor.black, for: .normal)
         healthbutton.backgroundColor = UIColor.white
         healthbutton.setTitleColor(UIColor(named:"word_0"), for: .normal)
         
@@ -260,8 +260,8 @@ class ViewController: UIViewController {
         drinkbutton.setTitleColor(UIColor(named:"word_0"), for: .normal)
         sportbutton.backgroundColor = UIColor.white
         sportbutton.setTitleColor(UIColor(named:"word_0"), for: .normal)
-        healthbutton.backgroundColor = UIColor.white
-        healthbutton.setTitleColor(UIColor(named:"word_0"), for: .normal)
+        healthbutton.backgroundColor = UIColor(named:"shopbutton_chosen")
+        healthbutton.setTitleColor(UIColor.black, for: .normal)
         
         block_food.isHidden = true
         block_drink.isHidden = true
@@ -271,6 +271,7 @@ class ViewController: UIViewController {
     
     @IBAction func closemsg(_ sender: Any) {
         msg.isHidden = true
+        get_img.isHidden = true
     }
     
     @IBAction func openmsg_dr_1(_ sender: Any) {
@@ -289,6 +290,14 @@ class ViewController: UIViewController {
         detail.text = "适量饮用红酒对身体健康和健身有积极影响。红酒含有抗氧化剂，可以降低心脏病风险，提高好胆固醇。然而，过量饮酒会影响运动表现，损害肌肉恢复。"
     }
     //person page
+    
+    @IBAction func getPressed(_ sender: Any) {
+        detail.text = ""
+        get_img.isHidden = false
+        msg.isHidden = false
+        get_img.image = UIImage(named:"2_Drink")
+        msgtitle.text = "饮茶有助健康"
+    }
     
     @IBAction func switchmode(_ sender: UISwitch) {
         

@@ -16,17 +16,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZt-LE-rml">
-                                <rect key="frame" x="44" y="650" width="316" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beg-pD-fPv">
+                                <rect key="frame" x="120.66666666666667" y="59" width="151.66666666666663" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性别：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0G-Wg-Ns3">
+                                <rect key="frame" x="46" y="155" width="52" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="运动目标：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOA-E8-kRQ">
+                                <rect key="frame" x="46" y="243" width="87" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-N7-qLq">
+                                <rect key="frame" x="127" y="136" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="male">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="male:" destination="Y6W-OH-hqX" eventType="touchDown" id="bzT-y0-KoX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-eW-t4G">
+                                <rect key="frame" x="238" y="136" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="female">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="female:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Kmg-cJ-3sR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB0-IQ-b0H">
+                                <rect key="frame" x="46.666666666666657" y="318" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZxM-km-BCh"/>
+                                    <constraint firstAttribute="width" constant="300" id="kBe-ll-USR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="减重"/>
+                                <connections>
+                                    <action selector="weightloss:" destination="Y6W-OH-hqX" eventType="touchDown" id="pgD-ak-x71"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-fD-HlG">
+                                <rect key="frame" x="46.666666666666657" y="418" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="93e-Hk-dWn"/>
+                                    <constraint firstAttribute="height" constant="50" id="ziM-Fj-WoG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="增肌"/>
+                                <connections>
+                                    <action selector="muscle:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qna-Ox-spP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwv-ry-Rga">
+                                <rect key="frame" x="46.666666666666657" y="518" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="STr-Sr-tCB"/>
+                                    <constraint firstAttribute="height" constant="50" id="n8e-1S-5Sx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="塑形"/>
+                                <connections>
+                                    <action selector="shape:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oKb-eJ-N51"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-KL-LRc">
+                                <rect key="frame" x="46.666666666666657" y="618" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7uE-Y3-hgv"/>
+                                    <constraint firstAttribute="width" constant="300" id="E4e-Ob-cra"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="健康"/>
+                                <connections>
+                                    <action selector="health:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5R2-TB-f78"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZt-LE-rml">
+                                <rect key="frame" x="46.666666666666657" y="718" width="300" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1A7-Lt-iOU"/>
+                                    <constraint firstAttribute="width" constant="300" id="MEj-Lb-ZNW"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="enter">
+                                        <fragment content="确认">
                                             <attributes>
-                                                <font key="NSFont" size="40" name="Helvetica"/>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="30" name="PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -35,88 +130,23 @@
                                     <action selector="entermainview:" destination="Y6W-OH-hqX" eventType="touchDown" id="1C3-sb-gQf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性别：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0G-Wg-Ns3">
-                                <rect key="frame" x="46" y="155" width="52" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-N7-qLq">
-                                <rect key="frame" x="127" y="136" width="74" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="male"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="male:" destination="Y6W-OH-hqX" eventType="touchDown" id="bzT-y0-KoX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-eW-t4G">
-                                <rect key="frame" x="238" y="136" width="76" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="female"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="female:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Kmg-cJ-3sR"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="运动目标：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOA-E8-kRQ">
-                                <rect key="frame" x="46" y="243" width="87" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB0-IQ-b0H">
-                                <rect key="frame" x="46" y="314" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="减重"/>
-                                <connections>
-                                    <action selector="weightloss:" destination="Y6W-OH-hqX" eventType="touchDown" id="pgD-ak-x71"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-fD-HlG">
-                                <rect key="frame" x="46" y="401" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="增肌"/>
-                                <connections>
-                                    <action selector="muscle:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qna-Ox-spP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwv-ry-Rga">
-                                <rect key="frame" x="46" y="477" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="塑形"/>
-                                <connections>
-                                    <action selector="shape:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oKb-eJ-N51"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-KL-LRc">
-                                <rect key="frame" x="46" y="565" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="健康"/>
-                                <connections>
-                                    <action selector="health:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5R2-TB-f78"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个人信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beg-pD-fPv">
-                                <rect key="frame" x="100" y="59" width="193" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O5H-KL-LRc" firstAttribute="top" secondItem="jwv-ry-Rga" secondAttribute="bottom" constant="50" id="EvR-eL-I8D"/>
+                            <constraint firstItem="xZt-LE-rml" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IbD-qA-Rsr"/>
+                            <constraint firstItem="xZt-LE-rml" firstAttribute="top" secondItem="O5H-KL-LRc" secondAttribute="bottom" constant="50" id="Jp4-ae-DE7"/>
+                            <constraint firstItem="UB0-IQ-b0H" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KbY-fU-vyt"/>
+                            <constraint firstItem="O5H-KL-LRc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NWR-4a-C7R"/>
+                            <constraint firstItem="jwv-ry-Rga" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="OK8-1G-7ff"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xZt-LE-rml" secondAttribute="bottom" constant="50" id="TAB-uk-fdA"/>
+                            <constraint firstItem="MxM-fD-HlG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="V7W-FU-byd"/>
+                            <constraint firstItem="beg-pD-fPv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="dwU-Sb-O67"/>
+                            <constraint firstItem="MxM-fD-HlG" firstAttribute="top" secondItem="UB0-IQ-b0H" secondAttribute="bottom" constant="50" id="eD1-e2-gha"/>
+                            <constraint firstItem="beg-pD-fPv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="r6Q-RT-HNa"/>
+                            <constraint firstItem="jwv-ry-Rga" firstAttribute="top" secondItem="MxM-fD-HlG" secondAttribute="bottom" constant="50" id="zof-1w-e54"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="enter" destination="xZt-LE-rml" id="FZM-t1-MtH"/>
@@ -134,8 +164,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="female" width="456" height="564"/>
-        <image name="male" width="508" height="530"/>
+        <image name="female" width="96" height="96"/>
+        <image name="male" width="96" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
