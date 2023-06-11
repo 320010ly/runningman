@@ -97,9 +97,16 @@ class ViewController: UIViewController {
         //person page
         reset.layer.cornerRadius = reset.frame.size.height / 2
         reset.clipsToBounds = true
-        
-        gender.text = "性别：女"
-        goal.text = "运动目标：减重"
+        if usergoal != nil {
+            gender.text = "性别：" + usergender!.rawValue
+            goal.text = "运动目标：" + usergoal!.rawValue
+        }
+        else {
+            gender.text = "性别：女"
+            goal.text = "运动目标：减重"
+        }
+        //gender.text = "性别：" + usergender!.rawValue
+        //goal.text = "运动目标：" + usergoal!.rawValue
 
         //data page
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -148,7 +155,13 @@ class ViewController: UIViewController {
         self.mainPIc.image = UIImage(named: "1_Sweat")
         self.startRunning.isEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.mainPIc.image = UIImage(named: "0_Heavy")
+            if (self.allTime < 15) {
+                self.mainPIc.image = UIImage(named: "0_Heavy")
+            } else if (self.allTime < 30) {
+                self.mainPIc.image = UIImage(named: "0_Medium")
+            } else {
+                self.mainPIc.image = UIImage(named: "0_Thin")
+            }
             self.startRunning.isEnabled = true
         }
     }

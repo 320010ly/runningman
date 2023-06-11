@@ -19,10 +19,13 @@ enum sportgoal:String{
     case muscle = "增肌"
 }
 
+internal var usergender:gender?
+internal var usergoal:sportgoal?
+
 class First:UIViewController{
     
-    var usergender:gender?
-    var usergoal:sportgoal?
+    //public var usergender:gender?
+    //public var usergoal:sportgoal?
     
     @IBOutlet weak var male: UIButton!
     
