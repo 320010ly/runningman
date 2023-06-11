@@ -15,11 +15,6 @@ class ViewController: UIViewController {
     
     
     
-    
-    
-    
-    
-    
     @IBOutlet weak var head: UILabel!
     
     //the buttons on the bottom
@@ -88,6 +83,7 @@ class ViewController: UIViewController {
 //        gradientLayer.startPoint = CGPoint(x:0,y:0)
 //        gradientLayer.endPoint = CGPoint(x:0,y:0.39)
 //        mainpage.layer.insertSublayer(gradientLayer, at: 0)
+        switchmode.isOn = false
         
         //hide the whip-sweat reminder
         if (ws_msg_show){
@@ -210,7 +206,12 @@ class ViewController: UIViewController {
         head.text = "生活商场"
         
         startRunning.isHidden = true
-        mainbutton.tintColor = UIColor(named:"leader_color")
+        
+        if switchmode.isOn {
+            mainbutton.tintColor = UIColor(named:"darktext")
+        }else {
+            mainbutton.tintColor = UIColor(named:"leader_color")
+        }
     }
     
     @IBAction func dataPressed(_ sender: Any) {
@@ -227,7 +228,11 @@ class ViewController: UIViewController {
         head.text = "锻炼记录"
         
         startRunning.isHidden = true
-        mainbutton.tintColor = UIColor(named:"leader_color")
+        if switchmode.isOn {
+            mainbutton.tintColor = UIColor(named:"darktext")
+        }else {
+            mainbutton.tintColor = UIColor(named:"leader_color")
+        }
     }
     
     @IBAction func personPressed(_ sender: Any) {
@@ -244,7 +249,11 @@ class ViewController: UIViewController {
         head.text = "个人"
         
         startRunning.isHidden = true
-        mainbutton.tintColor = UIColor(named:"leader_color")
+        if switchmode.isOn {
+            mainbutton.tintColor = UIColor(named:"darktext")
+        }else {
+            mainbutton.tintColor = UIColor(named:"leader_color")
+        }
     }
     
     //the four button below change the items in the shop view
@@ -366,8 +375,29 @@ class ViewController: UIViewController {
     //the two func below are the settings in the personview
     @IBAction func switchmode(_ sender: UISwitch) {
         if sender.isOn {
+            headview.backgroundColor = UIColor(named: "darkbg")
+            head.textColor = UIColor(named: "darktext")
+            
+            leaderview.backgroundColor = UIColor(named: "darkbg")
+            mainbutton.tintColor = UIColor(named: "darktext")
+            shopbutton.tintColor = UIColor(named: "darktext")
+            databutton.tintColor = UIColor(named: "darktext")
+            personbutton.tintColor = UIColor(named: "darktext")
+            startRunning.backgroundColor = UIColor(named: "darkbg")
+            startRunning.tintColor = UIColor(named: "darktext")
+            
             
         } else{
+            headview.backgroundColor = UIColor(named: "cover")
+            head.textColor = UIColor(named: "custom")
+            
+            leaderview.backgroundColor = UIColor(named: "cover")
+            shopbutton.tintColor = UIColor(named: "leader_color")
+            databutton.tintColor = UIColor(named: "leader_color")
+            personbutton.tintColor = UIColor(named: "leader_color")
+            mainbutton.tintColor = UIColor(named: "leader_color")
+            startRunning.backgroundColor = UIColor(named: "cover")
+            startRunning.tintColor = UIColor(named: "leader_color")
             
         }
     }
