@@ -349,10 +349,12 @@ class ViewController: UIViewController {
     
     @IBAction func openmsg_dr_1(_ sender: Any) {
         msg.isHidden = false
+        
         msgtitle.text = "茶"
         detail.numberOfLines = 0
         detail.lineBreakMode = .byWordWrapping
         detail.text = "茶，对我们的健身及整体健康有诸多益处。绿茶富含抗氧化物质，能增强体质，提高新陈代谢，有助于燃烧脂肪。乌龙茶和黑茶可助消化，补充运动后的能量。"
+    
     }
     
     @IBAction func openmsg_dr_2(_ sender: Any) {
