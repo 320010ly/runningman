@@ -19,7 +19,7 @@ class TimerViewController: UIViewController {
     
     var startTime: String!
     var endTime: String!
-    var duration: String!
+    var duration: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,9 @@ class TimerViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         endTime = formatter.string(from: date.addingTimeInterval(TimeInterval(time)))
         // record the new record
-        addRecord(st: startTime, et: endTime, du: duration)
+        if (duration != "") {
+            addRecord(st: startTime, et: endTime, du: duration)
+        }
         performSegue(withIdentifier: "toMain1", sender: self)
     }
     
@@ -94,6 +96,13 @@ class TimerViewController: UIViewController {
             try context.save()
         } catch {
             print("Additon failed!")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "toMain1"{
+            let destVC = segue.destination as! ViewController
+            destVC.ws_msg_show  = true
         }
     }
     

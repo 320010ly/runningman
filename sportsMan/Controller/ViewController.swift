@@ -24,11 +24,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var personpage: UIView!
     
     //the other small parts in every page
-    //in leader
-    @IBOutlet var startRunning: UIButton!
-    
     //in mainpage
+    @IBOutlet var startRunning: UIButton!
     @IBOutlet var mainPIc: UIImageView!
+    @IBOutlet weak var ws_msg: UIView!
+    var ws_msg_show = false
+    
     
     //in shoppage
     @IBOutlet var items: [UIView]!
@@ -77,6 +78,13 @@ class ViewController: UIViewController {
 //        gradientLayer.endPoint = CGPoint(x:0,y:0.39)
 //        mainpage.layer.insertSublayer(gradientLayer, at: 0)
         
+        //hide the whip-sweat reminder
+        if (ws_msg_show){
+            ws_msg.isHidden = false
+        }else{
+            ws_msg.isHidden = true
+        }
+        
         //set black border for items in shop
         for item in items{
             item.layer.borderWidth = 2.0
@@ -122,13 +130,31 @@ class ViewController: UIViewController {
         } else if (allTime >= 30) {
             mainPIc.image = UIImage(named: "0_Thin")
         }
+        
+        startRunning.isHidden = false
+        mainbutton.backgroundColor = UIColor(white: 1, alpha: 0)
+        print("view did load")
     }
     
-    
+    // start to exercise
     @IBAction func startPressed(_ sender: Any) {
         performSegue(withIdentifier: "toRunning", sender: self)
     }
     
+    //exercise ends and whip the sweat
+    @IBAction func wsPressed(_ sender: Any) {
+        ws_msg.isHidden = true
+        ws_msg_show = false
+        self.mainPIc.image = UIImage(named: "1_Sweat")
+        self.startRunning.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.mainPIc.image = UIImage(named: "0_Heavy")
+            self.startRunning.isEnabled = true
+        }
+    }
+    
+    
+    //the four func below change the page
     @IBAction func mainPressed(_ sender: Any) {
         mainbutton.setBackgroundImage(UIImage(systemName: "play.circle.fill"), for: .normal)
         shopbutton.setBackgroundImage(UIImage(systemName: "bag"), for: .normal)
@@ -141,6 +167,9 @@ class ViewController: UIViewController {
         personpage.isHidden = true
         
         head.text = "主页"
+        
+        startRunning.isHidden = false
+        mainbutton.tintColor = UIColor(white: 1, alpha: 0)
     }
     
     @IBAction func shopPressed(_ sender: Any) {
@@ -155,6 +184,9 @@ class ViewController: UIViewController {
         personpage.isHidden = true
         
         head.text = "生活商场"
+        
+        startRunning.isHidden = true
+        mainbutton.tintColor = UIColor(named:"leader_color")
     }
     
     @IBAction func dataPressed(_ sender: Any) {
@@ -169,6 +201,9 @@ class ViewController: UIViewController {
         personpage.isHidden = true
         
         head.text = "锻炼记录"
+        
+        startRunning.isHidden = true
+        mainbutton.tintColor = UIColor(named:"leader_color")
     }
     
     @IBAction func personPressed(_ sender: Any) {
@@ -183,8 +218,12 @@ class ViewController: UIViewController {
         personpage.isHidden = false
         
         head.text = "个人"
+        
+        startRunning.isHidden = true
+        mainbutton.tintColor = UIColor(named:"leader_color")
     }
     
+    //the four button below change the items in the shop view
     @IBAction func foodPressed(_ sender: Any) {
         foodbutton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         drinkbutton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
@@ -269,6 +308,7 @@ class ViewController: UIViewController {
         block_health.isHidden = false
     }
     
+    // the four func below call the msgbox in the shopview
     @IBAction func closemsg(_ sender: Any) {
         msg.isHidden = true
         get_img.isHidden = true
@@ -299,6 +339,7 @@ class ViewController: UIViewController {
         msgtitle.text = "饮茶有助健康"
     }
     
+    //the two func below are the settings in the personview
     @IBAction func switchmode(_ sender: UISwitch) {
         
     }
