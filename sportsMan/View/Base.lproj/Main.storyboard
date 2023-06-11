@@ -1425,7 +1425,9 @@
                         <outlet property="get_tea_button" destination="Wzb-cO-Kac" id="Zn8-i2-TWH"/>
                         <outlet property="goal" destination="VYJ-xG-2md" id="Ra4-Hu-fQi"/>
                         <outlet property="head" destination="pPu-XN-6Dt" id="25W-Wq-wOd"/>
+                        <outlet property="headview" destination="RUy-C4-iil" id="z2N-HJ-E8j"/>
                         <outlet property="healthbutton" destination="zLr-8D-NUc" id="cOE-4S-uFM"/>
+                        <outlet property="leaderview" destination="Lg1-ge-Ajw" id="h09-r6-Ax0"/>
                         <outlet property="mainPIc" destination="Gbo-s0-4R3" id="c1u-wV-XhR"/>
                         <outlet property="mainbutton" destination="8OF-16-ipL" id="acD-lQ-7ky"/>
                         <outlet property="mainpage" destination="cCP-4f-xDZ" id="rgH-6e-Osw"/>
@@ -1625,7 +1627,7 @@
             <color red="0.66699999570846558" green="0.875" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="leader_color">
-            <color red="0.36470588235294116" green="0.47843137254901957" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36500000953674316" green="0.4779999852180481" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="wordtype_0">
             <color red="0.33333333333333331" green="0.43137254901960786" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

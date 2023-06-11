@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class TimerViewController: UIViewController {
+    
+    var audioPlayer:AVAudioPlayer?
     
     var timer = Timer()
     var counter = 0
@@ -23,6 +27,18 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let path = Bundle.main.path(forResource: "bgm.mp3", ofType: nil){
+            let url = URL(fileURLWithPath: path)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print("failed to init audioplayer:\(error)")
+            }
+        }
+        audioPlayer?.numberOfLoops = -1
+        audioPlayer?.play()
+        
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         timerLabel.text = "00:00"
@@ -40,6 +56,10 @@ class TimerViewController: UIViewController {
     
 
     @IBAction func stopButtonTapped(_ sender: UIButton) {
+        
+        audioPlayer?.stop()
+        audioPlayer?.currentTime = 0
+        
         timer.invalidate()
         counter = 0
         // get end time

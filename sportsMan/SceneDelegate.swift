@@ -24,12 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         if launchedBefore {
             //UserDefaults.standard.set(false, forKey: "launchedBefore")
-            print("not first launch.")
+            //print("not first launch.")
             let mainStoryboard :UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let myVC = mainStoryboard.instantiateViewController(withIdentifier: "main")
             window.rootViewController = myVC
         } else {
-            print("first launch,setting userdefault.")
+            //print("first launch,setting userdefault.")
             UserDefaults.standard.set(true, forKey: "launchedBefore")
             let mainStoryboard :UIStoryboard = UIStoryboard(name: "First", bundle: nil)
             let myVC = mainStoryboard.instantiateViewController(withIdentifier: "firstview")

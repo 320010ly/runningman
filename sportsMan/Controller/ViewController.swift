@@ -9,6 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
     //the top txt
+    
+    @IBOutlet weak var headview: UIView!
+    @IBOutlet weak var leaderview: UIView!
+    
+    
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var head: UILabel!
     
     //the buttons on the bottom
@@ -354,7 +365,11 @@ class ViewController: UIViewController {
     
     //the two func below are the settings in the personview
     @IBAction func switchmode(_ sender: UISwitch) {
-        
+        if sender.isOn {
+            
+        } else{
+            
+        }
     }
     
     @IBAction func reset(_ sender: UIButton) {
