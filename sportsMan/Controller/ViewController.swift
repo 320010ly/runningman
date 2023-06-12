@@ -127,15 +127,17 @@ class ViewController: UIViewController {
             print("Failed to get data!")
         }
         
-        recordTableView.dataSource = self
+        recordTableView.dataSource = self //
         
         for i in records {
             allTime += Int(i.duration ?? "0") ?? 0
+            print("allTime: ")
+            print(allTime)
         }
         print(allTime)
         let minutes = (allTime / 60) % 60
         let hours = (allTime / 60) / 60
-        timeSum.text = String(format: "%02d时%02d分", hours, minutes)
+        timeSum.text = String(format: "%02d时%02d分", hours, minutes) //
         
         progressView.progress = Float(allTime) / 30.0
         
@@ -190,6 +192,31 @@ class ViewController: UIViewController {
         
         startRunning.isHidden = false
         mainbutton.tintColor = UIColor(white: 1, alpha: 0)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = Record.fetchRequest()
+
+        do {
+            records = try context.fetch(request)
+
+        } catch {
+            print("Failed to get data!")
+        }
+        
+        recordTableView.dataSource = self //
+        
+        for i in records {
+            allTime += Int(i.duration ?? "0") ?? 0
+            print("allTime: ")
+            print(allTime)
+        }
+        
+        if (allTime >= 15 && allTime < 30) {
+            mainPIc.image = UIImage(named: "0_Medium")
+        } else if (allTime >= 30) {
+            mainPIc.image = UIImage(named: "0_Thin")
+        }
     }
     
     @IBAction func shopPressed(_ sender: Any) {
@@ -233,6 +260,32 @@ class ViewController: UIViewController {
         }else {
             mainbutton.tintColor = UIColor(named:"leader_color")
         }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = Record.fetchRequest()
+
+        do {
+            records = try context.fetch(request)
+
+        } catch {
+            print("Failed to get data!")
+        }
+        
+        recordTableView.dataSource = self
+        
+        for i in records {
+            allTime += Int(i.duration ?? "0") ?? 0
+            print("allTime: ")
+            print(allTime)
+        }
+        print(allTime)
+        let minutes = (allTime / 60) % 60
+        let hours = (allTime / 60) / 60
+        timeSum.text = String(format: "%02d时%02d分", hours, minutes) //
+        
+        progressView.progress = Float(allTime) / 30.0
+        
     }
     
     @IBAction func personPressed(_ sender: Any) {
